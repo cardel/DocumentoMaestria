@@ -96,16 +96,23 @@
 
 %%%Resumen%%%%%%
 \chapter*{Resumen}
+\label{capResumen}
+\addcontentsline{toc}{chapter}{\nameref{capResumen}}
+
 \input{Capitulo0Inicio/Resumen}
+
 \thispagestyle{empty}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Introducción%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%Introducción%%%%%%
 \chapter*{Introducción}
+\label{capIntro}
+\addcontentsline{toc}{chapter}{\nameref{capIntro}}
 \input{Capitulo0Inicio/Introduccion}
 \thispagestyle{empty}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Capitulo UNO: Contexto y objetivos%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%Capitulo UNO: Contexto y objetivos%%%%%%%%%%%%%%%%%%%%%%%
+
 \chapter{Contexto y objetivos}
 \markboth{Contexto y objetivos}{Contexto y objetivos}
 \renewcommand{\thepage}{\arabic{page}}
@@ -128,77 +135,55 @@
 
 %%%%%%Capitulo DOS: Marco teórico%%%%%
 
-\chapter[Revisión de literatura]{Revisión de literatura}
-\markboth{Revisión de literatura}{Revisión de literatura}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Introduccion%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{Capitulo2MarcoTeorico/IntroCap2}
+\chapter[Revisión de literatura y Estado del arte]{Revisión de literatura y Estado del arte}
+\markboth{Revisión de literatura y Estado del arte}{Revisión de literatura y Estado del arte}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Terminos%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{Capitulo2MarcoTeorico/Terminos}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%GestionDelEspectro%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{Capitulo2MarcoTeorico/GestionEspectro}
+\input{Capitulo2EstadoDelArte/Glosario.tex}
+\input{Capitulo2EstadoDelArte/FractalidadYMultifractalidad.tex}
+\input{Capitulo2EstadoDelArte/Robustez.tex}
+\input{Capitulo2EstadoDelArte/InteligenciaArtificial.tex}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ProgramacionPorRestricciones%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{Capitulo2MarcoTeorico/CCP}
 
 %%%%%%%Capitulo TRES: Medición de multifractalidad%%%%%%
 
 \chapter{Análisis de multifractalidad}\label{cap3}
 \markboth{Análisis de multifractalidad}{Análisis de multifractalidad}
-%\input{Capitulo3Alcance/Alcances} 
 
-%%%%%Capitulo CUATRO: Modelo%%%%%%%%
+\input{Capitulo3Multifractalidad/BoxCounting.tex}
+\input{Capitulo3Multifractalidad/AlgoritmoDeSandBox.tex}
+\input{Capitulo3Multifractalidad/EstategiasEvolutivas.tex}
+\input{Capitulo3Multifractalidad/EstrategiasSimulatedAnnealing.tex}
+
+%%%%%Capitulo CUATRO: Análisis de Robustez%%%%%%%%
 \chapter{Análisis de la robustez}
 \markboth{Análisis de la robustez}{Análisis de la robustez}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Especificación del modelo%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{Capitulo4Modelo/Modelo}
+\input{Capitulo4Robustez/EstrategiasDeMedicion.tex}
+\input{Capitulo4Robustez/EstrategiasEvolutivas.tex}
+\input{Capitulo4Robustez/EstrategiasSimulated.tex}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Cálculo de costos%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{Capitulo4Modelo/Costos}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Justificacion Modelo%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{Capitulo4Modelo/JustificacionModelo}
 
 %%%%%Capitulo CINCO: Implementacion%%%%%%%%
 \chapter{Implementación de la librería} \label{capimp}
 \markboth{Implementación de la librería}{Implementación de la librería}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Introducion%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{Capitulo5Implementacion/implementacion}
+\input{Capitulo5Libreria/AspectosDeDesarrollo.tex}
+\input{Capitulo5Libreria/Requerimientos.tex}
+\input{Capitulo5Libreria/FuncionesProvistas.tex}
+\input{Capitulo5Libreria/API.tex}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Formatos E/S%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{Capitulo5Implementacion/formatoEntrada}
-%\input{Capitulo5Implementacion/formatoSalida}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Parametros aplicacion%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{Capitulo5Implementacion/parametros}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Base de datos%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{Capitulo5Implementacion/baseDeDatos}
 
 %%%%%%Capitulo SEIS: Análisis comparativo%%%%%%%%%%%%%%%%%%%%%
 \chapter{Análisis comparativo}\label{cap6}
 \markboth{Análisis comparativo}{Análisis comparativo}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Introduccion%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{Capitulo6ImplementacionCCP/IntroCap6}
+\input{Capitulo6Analisis/RedesUtilizadas.tex}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Estrategias distribución%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{Capitulo6ImplementacionCCP/Distribucion}
+\input{Capitulo6Analisis/AnalisisMultifractal.tex}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Estrategias búsqueda%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{Capitulo6ImplementacionCCP/Busqueda}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Debilidad y flexibilidad%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{Capitulo6ImplementacionCCP/DeyFeRestricciones}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Aplicativo%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{Capitulo6ImplementacionCCP/Aplicativo}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Anotaciones%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{Capitulo6ImplementacionCCP/Anotaciones}
+\input{Capitulo6Analisis/AnalisisRobustez.tex}
 
 
 %%%%CAPITULO 7: Conclusiones y trabajos futuros
@@ -206,11 +191,9 @@
 \chapter{Conclusiones y trabajos futuros}\label{cap7}
 \markboth{Conclusiones y trabajos futuros}{Conclusiones y trabajos futuros}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Conclusiones%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{Final/Conclusiones}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Trabajos futuros%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{Capitulo7Conclusiones/Conclusiones}
+\input{Capitulo7Conclusiones/TrabajosFuturos.tex}
 
-%\include{Final/TrabajosFuturos}
 %%%%%BIBLIOGRAFIA%%%%%%%%
 \bibliography{Bibliografia}
 
