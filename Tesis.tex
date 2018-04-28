@@ -111,7 +111,7 @@
 \input{Capitulo0Inicio/Introduccion}
 \thispagestyle{empty}
 
-%%%%%Capitulo UNO: Contexto y objetivos%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%Capitulo UNO: Contexto y objetivos%%%%%%%%%%%%%
 
 \chapter{Contexto y objetivos}
 \markboth{Contexto y objetivos}{Contexto y objetivos}
@@ -130,8 +130,8 @@
 %%%%%%%Justificación%%%%%%%
 \input{Capitulo1ContextoYObjetivos/Justificacion}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Información sobre los capitulos%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{Capitulo1ContextoYObjetivos/Informacion}
+%%%%%%%%%%%Información sobre los capítulos%%%%%%%%%%%%%
+\input{Capitulo1ContextoYObjetivos/Informacion.tex}
 
 %%%%%%Capitulo DOS: Marco teórico%%%%%
 
@@ -144,65 +144,75 @@
 \input{Capitulo2EstadoDelArte/Robustez.tex}
 \input{Capitulo2EstadoDelArte/InteligenciaArtificial.tex}
 
+%%%%%%%Capitulo TRES: Generación redes fractales%%%%%%
+\chapter[Generación de redes fractales]{Generación de redes fractales}
+\markboth{Generación de redes fractales}{Generación de redes fractales}
+\input{Capitulo3GeneracionRedesFractales/GeneracionFractales.tex}+
 
-%%%%%%%Capitulo TRES: Medición de multifractalidad%%%%%%
+%%%%%%%Capitulo Cuatro: Medición de multifractalidad%%%%%%
 
-\chapter{Análisis de multifractalidad}\label{cap3}
-\markboth{Análisis de multifractalidad}{Análisis de multifractalidad}
+\chapter{Medición de multifractalidad}\label{cap3}
+\markboth{Medición de multifractalidad}{Medición de multifractalidad}
 
-\input{Capitulo3Multifractalidad/BoxCounting.tex}
-\input{Capitulo3Multifractalidad/AlgoritmoDeSandBox.tex}
-\input{Capitulo3Multifractalidad/EstategiasEvolutivas.tex}
-\input{Capitulo3Multifractalidad/EstrategiasSimulatedAnnealing.tex}
+\input{Capitulo4Multifractalidad/BoxCounting.tex}
+\input{Capitulo4Multifractalidad/AlgoritmoDeSandBox.tex}
+\input{Capitulo4Multifractalidad/EstategiasEvolutivas.tex}
+\input{Capitulo4Multifractalidad/EstrategiasSimulatedAnnealing.tex}
 
-%%%%%Capitulo CUATRO: Análisis de Robustez%%%%%%%%
-\chapter{Análisis de la robustez}
-\markboth{Análisis de la robustez}{Análisis de la robustez}
+%%%%%Capitulo Cinco: Medición de Robustez%%%%%%%%
+\chapter{Medición de la robustez}
+\markboth{Medición de la robustez}{Medición de la robustez}
 
-\input{Capitulo4Robustez/EstrategiasDeMedicion.tex}
-\input{Capitulo4Robustez/EstrategiasEvolutivas.tex}
-\input{Capitulo4Robustez/EstrategiasSimulated.tex}
+\input{Capitulo5Robustez/EstrategiasDeMedicion.tex}
+\input{Capitulo5Robustez/EstrategiasEvolutivas.tex}
+\input{Capitulo5Robustez/EstrategiasSimulated.tex}
 
 
-%%%%%Capitulo CINCO: Implementacion%%%%%%%%
+%%%%%Capitulo Seis: Implementacion%%%%%%%%
 \chapter{Implementación de la librería} \label{capimp}
 \markboth{Implementación de la librería}{Implementación de la librería}
 
-\input{Capitulo5Libreria/AspectosDeDesarrollo.tex}
-\input{Capitulo5Libreria/Requerimientos.tex}
-\input{Capitulo5Libreria/FuncionesProvistas.tex}
-\input{Capitulo5Libreria/API.tex}
+\input{Capitulo6Libreria/AspectosDeDesarrollo.tex}
+\input{Capitulo6Libreria/Requerimientos.tex}
+\input{Capitulo6Libreria/FuncionesProvistas.tex}
+\input{Capitulo6Libreria/API.tex}
 
 
 
-%%%%%%Capitulo SEIS: Análisis comparativo%%%%%%%%%%%%%%%%%%%%%
-\chapter{Análisis comparativo}\label{cap6}
-\markboth{Análisis comparativo}{Análisis comparativo}
-
-\input{Capitulo6Analisis/RedesUtilizadas.tex}
-
-\input{Capitulo6Analisis/AnalisisMultifractal.tex}
-
-\input{Capitulo6Analisis/AnalisisRobustez.tex}
+%%%%%%Capitulo Siete: Multifractalidad y robustezo%%%%%%%%%%%%%%%%%%%%%
+\chapter{Multifractalidad y robustez}\label{cap7}
+\markboth{Multifractalidad y robustez}{Multifractalidad y robustez}
 
 
-%%%%CAPITULO 7: Conclusiones y trabajos futuros
+\input{Capitulo7MultifractalidadYRobustez/RelacionMultifractalidadRobustez.tex}
+
+\input{Capitulo7MultifractalidadYRobustez/Conclusiones.tex}
+
+%%%%%%Capitulo Ocho: Comparación de algoritmos%%%%%%%%%%%%%%%%%%%%%
+\chapter{Análisis comparativo}\label{cap8}
+\markboth{Comparación de algoritmos}{Comparación de algoritmos}
+
+\input{Capitulo8AnalisisComparativo/Conclusiones.tex}
+
+%%%%CAPITULO nueve: Conclusiones y trabajos futuros
 
 \chapter{Conclusiones y trabajos futuros}\label{cap7}
 \markboth{Conclusiones y trabajos futuros}{Conclusiones y trabajos futuros}
 
-\input{Capitulo7Conclusiones/Conclusiones}
-\input{Capitulo7Conclusiones/TrabajosFuturos.tex}
+\input{Capitulo9Conclusiones/Conclusiones}
+\input{Capitulo9Conclusiones/TrabajosFuturos.tex}
 
 %%%%%BIBLIOGRAFIA%%%%%%%%
 \bibliography{Bibliografia}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ANEXOS%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\chapter*{Anexos}
-%\addcontentsline{toc}{chapter}{Anexos}
-%\markboth{Anexos}{Anexos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ANEXOS%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Anexos}
+\addcontentsline{toc}{chapter}{Anexos}
+\markboth{Anexos}{Anexos}
+
+\input{CapituloAAnexos/RedesEstudio.tex}
+\input{CapituloAAnexos/ProtocoloDePruebas.tex}
 
 
 \end{document}

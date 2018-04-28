@@ -1,0 +1,27 @@
+Multifractalidad
+
+1) q/D(q)
+2) Exponentes de masa D(q) = T(q)/(q-1)
+3) Tabla, Q(0) Q(1), Delta (formula)
+
+Robustez
+
+Mutltifractalidad y robustez
+
+q/D(q)
+
+
+Comparativo
+
+Entreg las tecnicas y paper
+
+Perfomances
+
+Capitulo 1
+
+Generar redes.
+
+ANexos
+
+1) Especificacion de redes (Generadas y experimentales)
+https://es.sharelatex.com/project/5ad292da41a1926b924472d6
