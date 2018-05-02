@@ -72,16 +72,16 @@
 	
 \renewcommand{\tablename}{Tabla}
 %%%Portada%%%
-\input{Capitulo0Inicio/Portada.tex}
+\input{Capitulo0Preliminares/1-Portada.tex}
 
 
 \renewcommand{\thepage}{\roman{page}}
 %%%%%%Jurados%%%%%
-\input{Capitulo0Inicio/Jurados}
+\input{Capitulo0Preliminares/2-Jurados}
 
 %%%%%%%%Agradecimientos%%%%%%%
 \newpage
-\input{Capitulo0Inicio/Agradecimientos}
+\input{Capitulo0Preliminares/3-Agradecimientos}
 
 
 %%%%%%%%%%Tabla de contenido%%%%%%
@@ -99,7 +99,7 @@
 \label{capResumen}
 \addcontentsline{toc}{chapter}{\nameref{capResumen}}
 
-\input{Capitulo0Inicio/Resumen}
+\input{Capitulo0Preliminares/4-Resumen}
 
 \thispagestyle{empty}
 
@@ -108,12 +108,13 @@
 \chapter*{Introducción}
 \label{capIntro}
 \addcontentsline{toc}{chapter}{\nameref{capIntro}}
-\input{Capitulo0Inicio/Introduccion}
-\thispagestyle{empty}
+\input{Capitulo0Preliminares/5-Introduccion}
+\thispagestyle{empty}3-
 
 %%%%%Capitulo UNO: Contexto y objetivos%%%%%%%%%%%%%
 
 \chapter{Contexto y objetivos}
+\label{cap1}
 \markboth{Contexto y objetivos}{Contexto y objetivos}
 \renewcommand{\thepage}{\arabic{page}}
 \setcounter{page}{1}
@@ -136,6 +137,7 @@
 %%%%%%Capitulo DOS: Marco teórico%%%%%
 
 \chapter[Revisión de literatura y Estado del arte]{Revisión de literatura y Estado del arte}
+\label{cap2}
 \markboth{Revisión de literatura y Estado del arte}{Revisión de literatura y Estado del arte}
 
 
@@ -146,12 +148,13 @@
 
 %%%%%%%Capitulo TRES: Generación redes fractales%%%%%%
 \chapter[Generación de redes fractales]{Generación de redes fractales}
+\label{cap3}
 \markboth{Generación de redes fractales}{Generación de redes fractales}
 \input{Capitulo3GeneracionRedesFractales/GeneracionFractales.tex}+
 
 %%%%%%%Capitulo Cuatro: Medición de multifractalidad%%%%%%
 
-\chapter{Medición de multifractalidad}\label{cap3}
+\chapter{Medición de multifractalidad}\label{cap4}
 \markboth{Medición de multifractalidad}{Medición de multifractalidad}
 
 \input{Capitulo4Multifractalidad/BoxCounting.tex}
@@ -160,7 +163,8 @@
 \input{Capitulo4Multifractalidad/EstrategiasSimulatedAnnealing.tex}
 
 %%%%%Capitulo Cinco: Medición de Robustez%%%%%%%%
-\chapter{Medición de la robustez}
+\chapter{Medición de la robustez}\label{cap5}
+
 \markboth{Medición de la robustez}{Medición de la robustez}
 
 \input{Capitulo5Robustez/EstrategiasDeMedicion.tex}
@@ -169,7 +173,7 @@
 
 
 %%%%%Capitulo Seis: Implementacion%%%%%%%%
-\chapter{Implementación de la librería} \label{capimp}
+\chapter{Implementación de la librería} \label{cap6}
 \markboth{Implementación de la librería}{Implementación de la librería}
 
 \input{Capitulo6Libreria/AspectosDeDesarrollo.tex}
@@ -196,7 +200,7 @@
 
 %%%%CAPITULO nueve: Conclusiones y trabajos futuros
 
-\chapter{Conclusiones y trabajos futuros}\label{cap7}
+\chapter{Conclusiones y trabajos futuros}\label{cap9}
 \markboth{Conclusiones y trabajos futuros}{Conclusiones y trabajos futuros}
 
 \input{Capitulo9Conclusiones/Conclusiones}
