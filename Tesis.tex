@@ -55,7 +55,7 @@
 %Para tener los bookmarks del pdf (menú al lado derecho en los visualizadores de pdf)
 % si colorlinks= true, no salen las cajas, sino el color del link!!
 % linkcolor para los indices, citecolor para las citas en texto, urlcolor para los enlaces
-\usepackage[pdftex,bookmarks=true, pdfauthor={Grupo de Investigación en Inteligencia Artificial (GUIA)}, linkcolor=black, citecolor=black, colorlinks=true, urlcolor=black]{hyperref}
+\usepackage[pdftex,bookmarks=true, pdfauthor={Carlos Delgado}, linkcolor=black, citecolor=black, colorlinks=true, urlcolor=black]{hyperref}
            
 
 %Para poder hacer subfiguras (subfloat)
@@ -65,7 +65,8 @@
 
 \usepackage{pdflscape}%Para colocar páginas horizontales en el PDF
 \usepackage{multicol}
-
+\usepackage{todonotes}
+\usepackage{parskip}
 
 
 \begin{document}
@@ -119,20 +120,21 @@
 \renewcommand{\thepage}{\arabic{page}}
 \setcounter{page}{1}
 %%%%Formulación del problema%%%%%%%
-\input{Capitulo1ContextoYObjetivos/Formulacion}
+\input{Capitulo1ContextoYObjetivos/1-Formulacion}
+
+%%%%%%%Justificación%%%%%%%
+\input{Capitulo1ContextoYObjetivos/2-Justificacion}
+
 
 %%%%Objetivos%%%%
-\input{Capitulo1ContextoYObjetivos/Objetivos}
+\input{Capitulo1ContextoYObjetivos/3-Objetivos}
 
 
 %%%%%%%Alcances%%%%%%%
-\input{Capitulo1ContextoYObjetivos/Alcances}
+\input{Capitulo1ContextoYObjetivos/4-Alcances}
 
-%%%%%%%Justificación%%%%%%%
-\input{Capitulo1ContextoYObjetivos/Justificacion}
 
-%%%%%%%%%%%Información sobre los capítulos%%%%%%%%%%%%%
-\input{Capitulo1ContextoYObjetivos/Informacion.tex}
+
 
 %%%%%%Capitulo DOS: Marco teórico%%%%%
 
@@ -141,10 +143,10 @@
 \markboth{Revisión de literatura y Estado del arte}{Revisión de literatura y Estado del arte}
 
 
-\input{Capitulo2EstadoDelArte/Glosario.tex}
-\input{Capitulo2EstadoDelArte/FractalidadYMultifractalidad.tex}
-\input{Capitulo2EstadoDelArte/Robustez.tex}
-\input{Capitulo2EstadoDelArte/InteligenciaArtificial.tex}
+\input{Capitulo2EstadoDelArte/1-Glosario.tex}
+\input{Capitulo2EstadoDelArte/2-Multifractalidad.tex}
+\input{Capitulo2EstadoDelArte/3-Robustez.tex}
+\input{Capitulo2EstadoDelArte/4-InteligenciaArtificial.tex}
 
 %%%%%%%Capitulo TRES: Generación redes fractales%%%%%%
 \chapter[Generación de redes fractales]{Generación de redes fractales}
