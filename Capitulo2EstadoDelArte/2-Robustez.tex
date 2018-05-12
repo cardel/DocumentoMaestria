@@ -1,1 +1,28 @@
 \section{Análisis de robustez de redes complejas}
+
+\subsection{Medida de la robustez}
+
+El objetivo del análisis de robustez, es el estudio del efecto en las propiedades estructurales ante la pérdida de nodos y aristas\cite{Albert2000}. Este análisis depende de cada sistema que ha sido modelado con redes complejas, una instancia de esto es el efecto de la falla de enrutadores en el Internet.
+
+Una descripción más precisa, este análisis permite observar si la red complejas continua funcionando a pesar de que algunos componentes individuales han fallado o se han degradado. El enfoque consiste en cómo la estructura de la red cambia a medida que esta pierde vértices y aristas. Varios trabajos relevantes tratar en este tema en sistemas que son modelados como redes complejas, como es el caso de la resilencia de Internet ante caídas de enlaces o fallas aleatorias\cite{Cohen2000} y de cómo fortalecer estos sistemas para conservar su funcionamiento en eventos de talla\cite{Cohen2003}.
+
+Mark Newman en su libro Networks: An introduction\cite{Newman2010} realiza una profunda revisión en el capitulo 16, el cual trata sobre la percolación y resilencia en redes complejas. Varias estrategias de estudio son la perdida aleatoria de vértices y la pérdida de acuerdo al grado. Un enfoque de estudio es cómo se muestran las medidas estructurales dentro del componente gigante, el cual es el componente conexo más grande y a partir de allí se establece un análisis de la robustez de una red.
+
+Para formalizar esta medida, inicialmente se tienen en cuenta que desde la década de 1980, se tienen algunas métricas de conectividad. Algunas de ellas son la conectividad algebraica\cite{Fiedler1973}, la superconectividad\cite{Bauer1985}, conectividad condicional\cite{Harary1983} y número isoperimétrico\cite{Mohar1989}. Sin embargo, estas medidas de robustez basadas en la conectividad sólo consideran la estructura topológica de la red y no tienen en cuenta el nodo o enlace que falla. Para atacar este problema, Albert y otros\cite{Albert2000} proponen considerar las propiedades estadísticas como marco de trabajo para el medida de robustez. 
+
+Siguiendo la idea de analizar las propiedades estadísticas de las redes complejas, Schneider y otros\cite{Schneider2011} proponen una métrica de robustez basada en el tamaño del componente gigante, de la siguiente forma:
+
+\begin{equation}
+ R = \frac{1}{N} \sum \limits_{i=1}^{N} \delta(\frac{i}{N}) 
+\end{equation}
+En el cual se tiene un factor de normalización que depende del número de nodos $N$, y $\delta(\frac{i}{N})$ es la medida de una propiedad estructural en el componente gigante a medida que se pierde un número determinado de nodos. Este índice es una aproximación ampliamente utilizada para la medición de la robustez de una red compleja. Sin embargo, ellos no proveen información en un algoritmo detallado para calcular esta métrica. Para resolver este problema, Li y otros\cite{Li2012} desarrollan un algoritmo que permite realizar este proceso.
+
+\subsection{Aplicaciones del análisis de robustez}
+
+Gran parte de las aplicaciones de análisis de robustez nacen a partir del trabajo de Schneider y otros\cite{Schneider2011}, a continuación se mencionan algunos trabajos relevantes por área:
+
+\begin{itemize}
+    \item En seguridad, el trabajo de Li y otros\cite{Li2016} abarca el problema del estudio de la entropía de la información a la cual se le aplica un patrón de ruido conocido y como este afecta su estructura la cual se modela a través de una red compleja. De esta forma, ellos proponen un índice de resistencia que da una idea de la medida de robustez de una red de comunicaciones.
+    \item Para el suministro de energía, Pahwa y otros\cite{Pahwa2014} estudian el estrés que son sometidas las redes de transmisión de energía a medida que aumenta la demanda y las caídas de enlaces. Ellos realizan un estudio con redes reales encontrando una directa relación entre la caída total del sistema y la medida de robustez de la red.
+    \item En salud pública, un tema de gran interés es el estudio de la propagación de epidemias dentro de comunidad. En un estudio realizado por Chami y otros\cite{Chami2017} se estudian las estrategias que pueden aplicar las organizaciones encargadas de velar por la salud pública. Algunas de estas estrategias consisten en aislar a los individuos enfermos o fomentar que estas personas eviten contacto con otros, sin embargo, ellos encuentran a partir de un caso de estudio que consiste en una red de amistades de comunidades rurales en Uganda que un enfoque más eficiente para controlar la propagación de epidemias es vacunar o aislar aleatoriamente a ciertos individuos que tienen contacto con muchas personas así no estén enfermos, como es el caso de profesores, funcionarios de gobierno entre otros. Al aplicar este enfoque en la comunidad de estudio, se encuentra que la efectividad de la propagación de enfermedades se reduce, ya que esto produce un mayor efecto en la red de propagación.
+\end{itemize}
