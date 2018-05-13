@@ -6,7 +6,7 @@ El análisis multifractal es útil para caracterizar la heterogeneidad espacial 
 
 Las diferentes estrategias permiten calcular los exponentes de masa $\tau_q$, que representan como cambia la densidad de la red a medida que se escala por un factor real $q$ y la pendiente de esta recta para un $q$ dado viene siendo la dimensión fractal $D_q$, de esta forma se puede estudiar los cambios en la estructura de la red a medida que esta es escalada.
 
-Si la función $D_q$ es una linea recta, se dice que la red es monofractal, en caso contrario, es multifractal.
+Si la función $D_q$ es una linea recta, se dice que la red es monofractal, en caso contrario, es multifractal. Esta función tiene algunos valores clave\cite{Halsey1986}: $D_0$ es la dimensión fractal, $D_1$ es la dimensión  informacional y $D_2$ es la correlación.
 
 \section{Estrategias de cubrimiento de cajas}
 
@@ -88,7 +88,121 @@ El procedimiento para calcular las dimensiones fractales es:
 
 Posteriormente se realiza una regresión lineal entre $\ln \overline{Z_r(q)}$ y $\ln\frac{r}{d}$. Se debe considera el caso especial cuando $q=1$.
 
-El algoritmo es implementado en lenguaje Python y es aplicado en las siguientes redes del Anexo A en la página \pageref{AnexoA}
+El algoritmo es implementado en lenguaje Python y es aplicado en las siguientes redes del Anexo A en la página \pageref{AnexoA},
+
+Para la red libre de escala de 4000 nodos se obtiene, la relación entre $q$ y $\ln Zr$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Capitulo4Multifractalidad/imagenes/scaleFree4000_TqLnrBCscaleFree4000Nodes.png}
+    \caption{Regresión linea para red libre de escala 4000 nodos}
+\end{figure}
+
+Cada valor de $q$ tiene su función de la cual se obtiene su pendiente, la cual corresponde a sus exponentes de masa.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Capitulo4Multifractalidad/imagenes/scaleFree4000_TqscaleFree4000Nodes.png}
+    \caption{Exponentes de masa para red libre de escala 4000 nodos}
+\end{figure}
+
+Posteriormente, se realiza la transformación para obtener la dimensión fractal generalizada tomando en cuenta el caso especial para $q=1$. Es de anotar que en la práctica la dimensión se analiza para $q\geq0$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Capitulo4Multifractalidad/imagenes/scaleFree4000_DqscaleFree4000Nodes.png}
+    \caption{Dimensión fractal generalizada para red libre de escala 4000 nodos}
+\end{figure}
+
+De esta se puede obtener la siguiente información y compararla con el articulo de Wang\cite{Wang2012}:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+         \textbf{Dato}& \textbf{Valor obtenido} & \textbf{Valor articulo} \\
+         \hline
+         Dimensión fractal & 2.97 & 3.26 \\
+         \hline
+         Dimensión fractal generalizada & 2.82 & 3.15 \\
+         \hline
+         Dimensión de correlación & 2.44 & 2.81 \\
+         \hline
+         Dimensión máxima & 2.97 & 3.26 \\
+         \hline
+         Dimensión mínima & 1.29 & 1.75 \\
+         \hline
+         Variación en la dimensión & 1.68 & 1.51 \\
+         \hline
+    \end{tabular}
+    \caption{Datos obtenidos con el método Box Counting Fixed size comparando con datos del artículo de Wang\cite{Wang2012}}
+\end{table}
+
+Las diferencias en la medida de la dimensión fractal se deben a que el método es una aproximación y debe ejecutarse muchas veces, además que las redes del articulo y la generada son distintas.
+
+Para evitar estas diferencias Li\cite{Li2014} recomienda que para el caso de $q=0$ se tome directamente la dimensión fractal obtenida por algoritmo de Box Counting, que en este caso es 3.13.
+
+En las gráficas se puede observar que las redes libres de escala son multifractales, algo que es esperado ya que internamente estas redes tienen estructuras diferentes debido a la presencial de hubs altamente conectados.
+
+A continuación se realiza el mismo proceso para una red de mundo pequeño con 5000 nodos generada con un modelo de Watts-Strogatz con una probabilidad de reconexión del 10\%
+
+Para la regresión lineal
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Capitulo4Multifractalidad/imagenes/smallWorld5000p10_TqLnrBCsmallWorld5000p10.png}
+    \caption{Regresión linea para red de mundo pequeño con 5000 nodos y $p=10\%$}
+\end{figure}
+
+A continuación, los exponentes de masa:
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Capitulo4Multifractalidad/imagenes/smallWorld5000p10_TqLnrBCsmallWorld5000p10.png}
+    \caption{Exponentes de masa para red de mundo pequeño con 5000 nodos y $p=10\%$}
+\end{figure}
+
+Finalmente, la dimensión fractal generalizada
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Capitulo4Multifractalidad/imagenes/smallWorld5000p10_DqsmallWorld5000p10.png}
+    \caption{Dimensión fractal generalizada para red de mundo pequeño con 5000 nodos y $p=10\%$}
+\end{figure}
+
+De acuerdo a los datos del articulo se encuentra:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+         \textbf{Dato}& \textbf{Valor obtenido} & \textbf{Valor articulo} \\
+         \hline
+         Dimensión fractal & 3.31 & 2.79 \\
+         \hline
+         Dimensión fractal generalizada & 3.41 & 2.8 \\
+         \hline
+         Dimensión de correlación & 3.36& 2.81 \\
+         \hline
+         Dimensión máxima & 3.41 & 2.81 \\
+         \hline
+         Dimensión mínima & 3.18 & 2.75 \\
+         \hline
+         Variación en la dimensión & 0.23 & 0.06 \\
+         \hline
+    \end{tabular}
+    \caption{Datos obtenidos con el método Box Counting Fixed size comparando con datos del artículo de Wang\cite{Wang2012}}
+\end{table}
+
+Los resutlados varían ya que las redes del articulo y las utilizadas en estas pruebas son generadas, es decir que no son las mismas.
+
+Se observa que la variación en la dimensión fractal es muy pequeña, por lo que se puede concluir que las redes libres de escala son monofractales, es decir que se pueden considerar como una sola estructura.
+
+La dimensión fractal de esta red es 3.47
+
+
 
 \subsubsection{Box Covering Compact}
 
