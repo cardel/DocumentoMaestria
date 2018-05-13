@@ -1,2 +1,48 @@
 \section*{Anexo A: Descripción de redes de prueba}
 \addcontentsline{toc}{section}{Anexo A: Descripción de redes de prueba}
+\label{AnexoA}
+
+En la siguiente tabla se describen las redes utilizadas en este trabajo:
+
+
+
+\begin{longtable}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{4cm}|}
+\hline
+    \textbf{Tipo} & \textbf{Número de vértices} & \textbf{Número de aristas} & \textbf{Diámetro} & \textbf{Diámetro camino promedio más corto} & \textbf{Descripción}\\
+    \hline
+     \endhead
+    Libre de escala & 2000 & 1999 & 19 & 10.14 & Generada con modelo Barabasi-Albert \\
+    \hline
+    Libre de escala & 4000 & 3999 & 22 & 11.91 & Generada con modelo Barabasi-Albert \\
+    \hline
+    Libre de escala & 8000 & 7999 & 23 & 10.95 & Generada con modelo Barabasi-Albert \\
+    \hline
+    Mundo pequeño & 5000 & 24997 & 11 & 7.87 & Generada con modelo Watts-Strogatz, con probabilidad de reconexión del 5\% \\
+    \hline
+    Mundo pequeño & 5000 & 25000 & 9 & 6.4 & Generada con modelo Watts-Strogatz, con probabilidad de reconexión del 10\% \\
+    \hline
+    Mundo pequeño & 5000 & 24996 & 7 & 5.43 & Generada con modelo Watts-Strogatz, con probabilidad de reconexión del 20\% \\
+    \hline
+    Aleatoria & 1991 & 5939 & 8 & 4.95 & Generada con modelo Erdos-Renyi \\
+    \hline   
+    Aleatoria & 3373 & 5978 & 8& 7.69 & Generada con modelo Erdos-Renyi \\
+    \hline
+    Aleatoria & 5620 & 8804 & 14 & 8.84 & Generada con modelo Erdos-Renyi \\
+    \hline  
+    Real & 3954 & 7810 & 12 & 5.07 & Red de iteraciones de proteínas de la bacteria intestinal C.elegans obtenida desde Biogrid\cite{biogrid}\\
+    \hline  
+    Real & 5176 & 22624 & 9 & 4.75 &  Red de de iteraciones de proteínas del hongo cerevisiae obtenida desde DIP \cite{dipcite}\\
+    \hline  
+    Real & 2940 & 11627 & 10 & 4.93 & Red de las iteraciones de proteínas de Ecoli obtenida desde DIP\cite{dipcite}\\
+    \hline  
+    Fractal & 2732 & 4096  & 64 & 57.15 & Séptima generación de (2,2)-flower\\
+    \hline  
+    Fractal & 2732 & 4096 & 12 & 7.87 & Séptima generación de (1,3)-flower\\
+    \hline  
+\caption{Redes utilizadas en el proyecto}
+\label{tab:redesPrueba}
+\end{longtable}
+
+Las redes reales fueron procesadas con el software Cytoscope para generar la red asociada no dirigida y posteriormente con Gephi para transformarlas en formato PEJEK.
+
+\newpage
