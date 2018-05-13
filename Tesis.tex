@@ -57,17 +57,13 @@
 % linkcolor para los indices, citecolor para las citas en texto, urlcolor para los enlaces
 \usepackage[pdftex,bookmarks=true, pdfauthor={Carlos Delgado}, linkcolor=black, citecolor=black, colorlinks=true, urlcolor=black]{hyperref}
            
-
-%Para poder hacer subfiguras (subfloat)
-\usepackage{subfig}
-
 \usepackage{enumitem} % Para poder continuar enumerate en otras partes
 
 \usepackage{pdflscape}%Para colocar páginas horizontales en el PDF
 \usepackage{multicol}
 \usepackage{todonotes}
 \usepackage{parskip}
-
+\usepackage{subcaption}
 
 \begin{document}
 	
@@ -110,7 +106,7 @@
 \label{capIntro}
 \addcontentsline{toc}{chapter}{\nameref{capIntro}}
 \input{Capitulo0Preliminares/5-Introduccion}
-\thispagestyle{empty}3-
+\thispagestyle{empty}
 
 %%%%%Capitulo UNO: Contexto y objetivos%%%%%%%%%%%%%
 
@@ -159,13 +155,14 @@
 
 %%%%%%%Capitulo Cuatro: Medición de multifractalidad%%%%%%
 
-\chapter{Medición de multifractalidad}\label{cap4}
-\markboth{Medición de multifractalidad}{Medición de multifractalidad}
+\chapter{Análisis multifractal}\label{cap4}
+\markboth{Análisis multifractal}{Análisis multifractal}
 
-\input{Capitulo4Multifractalidad/BoxCounting.tex}
-\input{Capitulo4Multifractalidad/AlgoritmoDeSandBox.tex}
-\input{Capitulo4Multifractalidad/EstategiasEvolutivas.tex}
-\input{Capitulo4Multifractalidad/EstrategiasSimulatedAnnealing.tex}
+\input{Capitulo4Multifractalidad/1-BoxCounting.tex}
+\input{Capitulo4Multifractalidad/2-AlgoritmoDeSandBox.tex}
+\input{Capitulo4Multifractalidad/3-EstategiasEvolutivas.tex}
+\input{Capitulo4Multifractalidad/4-EstrategiasSimulatedAnnealing.tex}
+\input{Capitulo4Multifractalidad/5-ResumenYConclusiones.tex}
 
 %%%%%Capitulo Cinco: Medición de Robustez%%%%%%%%
 \chapter{Medición de la robustez}\label{cap5}

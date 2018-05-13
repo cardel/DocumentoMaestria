@@ -1,1 +1,135 @@
 \section{Algoritmo para generar redes complejas}
+
+Para la generación de redes fractales se utiliza la matriz de adyacencia para realizar este proceso. La matriz de adyacencia $M$ de un grafo o red $G(V,E)$ no dirigido es de tamaño $|V|\times|V|$. Para cada $(i,j)\in V^2$ se tiene que $M_{i,j}=1$ si existe una arista entre $i$ y $j$, en caso contrario $M_{i,j}=0$. 
+Dado que la matriz de adyacencia para grafos no dirigidos tiene simetría triangular superior, sólo se requiere recorrer las filas $i$ y columnas $j$ que cumplan $i<j$
+
+\subsection{Red (2,2)-flower}
+
+Para la generación 0, se toma como caso base la siguiente matriz de adyacencia:
+
+\begin{figure}[H]
+    \centering
+\[ 
+\left( \begin{array}{cc}
+ 0 & 1  \\ 
+ 1 & 0 \\
+\end{array} \right)\]
+\caption{Matriz de adyacencia para la generación 0 de (2,2)-flower}
+\end{figure}
+
+Para cada generación, se recorre la matriz de tal forma cuando se encuentra un $1$ en una posición $(i,j)$ cualesquiera, esta es cambiada por 0, es decir que se elimina la arista, es de anotar, que también se hace lo mismo con $(j,i)$ dado que simétrica.  Después se agregan dos filas llenas de ceros $k$ y $k+1$. Dado que la matriz es simétrica agregar una fila implica agregar una columna. En las siguientes posiciones se coloca 1:
+
+\begin{itemize}
+    \item En las posiciones $(i,k)$, $(k,i)$, $(i,k+1)$, $(k+1,i)$, $(j,k)$, $(j,k+1)$, $(j,k+1)$ y $(j,k+1)$,
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+     \begin{subfigure}[b]{0.25\textwidth}
+\[ 
+\left( \begin{array}{cc}
+ 0& \textbf{1}  \\ 
+\textbf{1} &  0 \\
+\end{array} \right)\]
+\caption{Generación 0}
+ \end{subfigure}~ \begin{subfigure}[b]{0.25\textwidth}
+ \[ \left( \begin{array}{cccc}
+ 0 &  \textbf{0} & 1 & 1  \\ 
+\textbf{0} & 0 & 1 & 1\\
+ 1 & 1 & 0 & 0 \\
+ 1 & 1 & 0 & 0\\
+\end{array} \right)\]
+\caption{Generación 1}
+     \end{subfigure}
+    \caption{Proceso para construir la generación 1 de (2,2)-flower. Observe que las aristas eliminadas son resaltadas en negrilla}
+    \label{fig:redesfractalesA}
+\end{figure}
+
+En la figura \ref{fig:redesfractalesA} se muestra  que cada arista en la generación anterior es eliminada.
+
+En la tabla  \ref{tab:flower22} se puede observar algunas propiedades estructurales de las primeras 4 generaciones de (2,2)-flower.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{3cm}|}
+    \hline
+        \textbf{Generación} & \textbf{Número de vértices} & \textbf{Número de aristas} & \textbf{Grado promedio} & \textbf{Diámetro de la red} & \textbf{Longitud media de caminos}\\
+        \hline
+        0 &2 & 1 & 1 & 1 & 1\\
+        \hline
+        1 &4 & 4 & 2 & 2 & 1.33\\
+        \hline
+        2 &12 &16 &2.67 & 4 & 2.3\\
+        \hline
+        3 &44 &64 & 2.91 & 8& 4.35 \\
+        \hline
+    \end{tabular}
+    \caption{Propiedades estructurales de generaciones 0,1,2 y 3 de la red fractal (2,2)-flower}
+    \label{tab:flower22}
+\end{table}
+
+
+\subsection{Red (1,3)-flower}
+
+Para la generación 0, se toma como caso base la siguiente matriz de adyacencia:
+
+\begin{figure}[H]
+    \centering
+\[ 
+\left( \begin{array}{cc}
+ 0 & 1  \\ 
+ 1 & 0 \\
+\end{array} \right)\]
+\caption{Matriz de adyacencia para la generación 0 de (1,3)-flower}
+\end{figure}
+
+Para cada generación, se recorre la matriz de tal forma cuando se encuentra un $1$ en una posición $(i,j)$ cualesquiera. Como se deben agregar dos vértices, se crean filas llenas de ceros $k$ y $k+1$. Dado que la matriz es cuadrada agregar una fila implica agregar una columna. Para crear el camino de longitud 1, en las siguientes posiciones se coloca 1:
+
+\begin{itemize}
+    \item Para generar un camino de longitud 2, para las posiciones $(k,k+1)$ y $(k+1,k)$ 
+    \item En las posiciones $(i,k)$, $(k,i)$, $(j,k+1)$ y $(j,k+1)$, para conectar los nodos antiguos con un camino de longitud 2 $(y-1)$.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+     \begin{subfigure}[b]{0.25\textwidth}
+\[ 
+\left( \begin{array}{cc}
+ 0 & \textbf{1}  \\ 
+\textbf{1} & 0 \\
+\end{array} \right)\]
+\caption{Generación 0}
+ \end{subfigure}~ \begin{subfigure}[b]{0.25\textwidth}
+ \[ \left( \begin{array}{cccc}
+ 0 & \textbf{1} & 1 & 0  \\ 
+ \textbf{1} & 0 & 0 & 1\\
+ 1 & 0 & 0 & 1 \\
+ 0 & 1 & 1 & 0\\
+\end{array} \right)\]
+\caption{Generación 1}
+     \end{subfigure}
+    \caption{Proceso para construir la generación 1 de (1,3), flower. Observe que las aristas que se conservan son resaltadas en negrilla}
+    \label{fig:redesfractales}
+\end{figure}
+
+El proceso mostrado en la figura  \ref{fig:redesfractales} para las (1,3)-flowers, para cada arista se generan dos vértices conectados por una arista. Las dos aristas se conectan por sus extremos. A continuación se describen las propiedades estructurales de las primeras 4 generaciones de la (1,3)-flower
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{3cm}|}
+    \hline
+        \textbf{Generación} & \textbf{Número de vértices} & \textbf{Número de aristas} & \textbf{Grado promedio} & \textbf{Diámetro de la red} & \textbf{Longitud media de caminos}\\
+        \hline
+        0 &2 & 1 & 1 & 1 & 1\\
+        \hline
+        1 &4 & 4 & 1 & 2 & 1.2\\
+        \hline
+        2 &12 &16 &2.67 & 4 & 2.3\\
+        \hline
+        3 &44 &64 & 2.91 & 6 & 3.11 \\
+        \hline
+    \end{tabular}
+    \caption{Propiedades estructurales de generaciones  0,1,2 y 3 de la red fractal (1,3)-flower}
+    \label{tab:flower13}
+\end{table}
+
+\newpage
