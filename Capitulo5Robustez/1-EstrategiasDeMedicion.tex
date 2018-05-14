@@ -1,17 +1,29 @@
 \section{Análisis de robustez}
 
-\subsubsection{Medidas de robustez}
+La medición de la rubustez se utilzia el indice R presentado por Schneider\cite{Schneider2011} para calcular la robustez en la red. En el cual se toman dos medidas
 
+\begin{itemize}
+    \item El número de nodos con respecto al total inicial de nodos del componente gigante a medida que la red pierde nodos
+    \item El promedio de los caminos más cortos del componente gigante a medida que la red pierde nodos
+\end{itemize}
 
-Medidas que hay 
+El algoritmo de robustez se describe de la siguiente forma:
 
-Mismas gráficas de Hernán
+\begin{enumerate}
+    \item Se calculan las medidas iniciales en la red sin quitar ningún nodo.
+    \item Se van quitando simultáneamente 10\% de los nodos de la red bajo alguna estrategia de ataque elegida.
+    \item Se calcula la medida de robustez como la suma de los medidas a medida que se van quitando los nodos simultáneamente.
+\end{enumerate}
 
-Solo robustez
-
-\subsubsection{Estrategias de simulación de ataques}
-
-
-Para las mismas redes
+Es de anotar que en este caso se utiliza la medida de ataque simultaneo y no secuencial debido a que se debe realizar el análisis multifractal cada vez y debido a su elevado costo computacional, no es factible realizar las pruebas repitiéndolo muchas veces.
 
 \section{Estrategias de ataque}
+
+
+\subsubsection{Por grado}
+
+Se eliminan los nodos de acuerdo a su grado.
+
+\subsubsection{Por centralidad}
+
+Se eliminan los nodos de acuerdo a su centralidad. Con esto se busca destruir la capacidad de transmitir información de la red.
