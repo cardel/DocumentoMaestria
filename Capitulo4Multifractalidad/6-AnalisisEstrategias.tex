@@ -1,0 +1,31 @@
+\section{Estudio de los algoritmos de inteligencia artificial}
+
+Los algoritmos Genético y de Recocido simulado son comparados aplicando pruebas en las siguientes redes
+
+\begin{itemize}
+    \item Red A: Libre de escala 2000 nodos
+    \item Red B: Mundo pequeño 5000 nodos, probabilidad de reconexión 5\%
+    \item Red C: Red aleatoria 3733 nodos
+    \item Red D: Red real del hongo cerevisiae
+\end{itemize}
+
+En el caso del algoritmo genético también es mostrada la evolución de la función de evaluación.
+
+\section{Comparativa de tiempos de ejecución}
+
+En la tabla \ref{tab:executionTimes} son analizados los tiempos de ejecución de cada uno de los algoritmos, de acuerdo al protocolo de pruebas especificado en el Anexo B de la página \pageref{AnexoB}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{1cm}|p{1cm}|p{1.1cm}|p{1cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+         \hline
+         \textbf{Red} & \textbf{FSBC} & \textbf{GCC} & \textbf{SB} & \textbf{Genético FSBC} & \textbf{Recocido FSBC} &
+         \textbf{Genético BCC} & \textbf{Recocido BCC} &
+         \textbf{Genético SB} & \textbf{Recocido SB} \\
+         \hline
+         Red A & 10788 & 10715 & 1193 & 7097 & 5092 & 6324 & 4995 &4644 & 6653 \\
+         \hline
+    \end{tabular}
+    \caption{Tiempos de ejecución para diferentes redes en segundos}
+    \label{tab:executionTimes}
+\end{table}

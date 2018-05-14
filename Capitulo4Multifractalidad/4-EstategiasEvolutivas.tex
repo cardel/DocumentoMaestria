@@ -1,0 +1,56 @@
+\section{Estrategias evolutivas}
+
+La idea de esta estrategia es buscar los centros de cajas directamente, de tal forma el algoritmo no deba realizar repeticiones
+
+\subsection{El algoritmo}
+
+El genotipo del algoritmo es un arreglo de enteros, el cual indica los nodos que van a ser centros de cajas. Este tiene tamaño entre el 40\% y 80\% del número total de nodos de la red.
+
+\begin{equation}
+    [a_1,a_2,a_3,\cdots,a_n]
+\end{equation}
+
+El fenotipo es los centros de las cajas sobre los cuales se va calcular el algoritmo.
+
+\subsubsection{Población inicial}
+
+La población inicial son $k$ individuos, cada uno de los cuales es una selección aleatoria de nodos sin repetir.
+
+\subsubsection{Función de evaluación}
+
+La evaluación de un individuo consiste en dos factores:
+
+\begin{itemize}
+    \item El grado de cada uno de los centros, entre mayor sea, mayor puntaje tiene el individuo
+    \item La distancia entre los centros, se busca que estén lo más alejados posibles
+\end{itemize}
+
+Un individuo es calificado de acuerdo a la suma de estos factores
+
+\subsubsection{Operadores}
+
+Para el cruce, se hace una selección por ruleta\cite{9788497321839}, el cruce entre dos individuos se genera de la siguiente forma:
+
+\begin{enumerate}
+    \item Se toman los nodos de los dos padres y se incluyen en un conjunto
+    \item Se toman nodos aleatorios de este conjunto para generar un hijo
+\end{enumerate}
+
+De esta forma, se cruzan los individuos para garantizar se tengan hijos válidos. En cada generación se crean ún numero determinado de nuevos individuos, el cual es especificado como entrada al algoritmo.
+
+Para la mutación, se selecciona un nodo de un individuo y se cambia por otro, conservando que no sea igual a otro nodo.
+
+\subsubsection{Cambio de población}
+
+Se eliminan los individuos con peor valor de función de evaluación, los cuales son reemplazados por los nuevos individuos creados en el cruce.
+
+
+\subsubsection{Criterio de parada}
+
+Se manejan dos criterios de parada, los cuales son entradas al algoritmo:
+
+\begin{itemize}
+    \item Un número de iteraciones especificado por le usuario
+    \item Un criterio que consiste en observar si en un número determinado de iteraciones, no se presenta mejora en el mejor individuo
+\end{itemize}
+

@@ -1,10 +1,21 @@
 \section{Algoritmo SandBox}
 
+Liu y otros\cite{Liu2015} han realizado una explicación de rendimiento por los diferentes algoritmos de Boxcounting encontrando que estos requiere un gran tiempo de cómputo, ya que prueban muchas configuraciones de nodos para obtener una estructura de cubrimiento por cajas óptima para calcular la dimensión fractal.
 
-Multifractalidad
+La propuesta consiste en escoger un número de centros de cajas aleatorios y permitir que las cajas de solapen. Cada caja tiene un numero de nodos dado un tamaño $r$, dado que se permite solapamientos, como medida se utilizará el promedio del número de nodos en cada caja y con este valor se realiza al proceso.
 
-1) q/D(q)
-2) Exponentes de masa D(q) = T(q)/(q-1)
-3) Tabla, Q(0) Q(1), Delta (formula), Comparando contra Paper
+El proceso de este algoritmo es el siguiente:
 
-Robustez
+ \begin{itemize}
+     \item Inicialmente, seleccione un porcentaje nodos como centros de las cajas.
+     \item Seleccione el radio $r \in [1,d]$ de cada caja de arena que será usado para cubrir la red.
+     \item Cuente el número de nodos en cada caja de arena de radio $r$, denote este número como $M(r)$.
+     \item Para todos los centros elegidos calcule el promedio estadístico de $\overline{M(r)^(q-1)}$
+ \end{itemize}
+ 
+ La regresión lineal se realiza entre $\ln(\overline{M(r)^(q-1)})$ y $\ln(\frac{r}{d})$
+ 
+ Ya que este método elige centros aleatorios se recomienda repetirlo varias veces para mejorar la precisión.
+ 
+
+ 

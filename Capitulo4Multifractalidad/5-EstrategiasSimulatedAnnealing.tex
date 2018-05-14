@@ -1,0 +1,7 @@
+\section{Estrategias Recocido Simulado}
+
+Este algoritmo tiene la misma estrategia del algoritmo evolutivo, la diferencia radica en que iniciamos con un estado aleatorio y aceptamos el estado de acuerdo a la función de evaluación y a la temperatura del sistema.
+
+El estado está descrito en términos de un conjunto de nodos de tamaño definido por el usuario, los cuales representan los centros de las cajas.
+
+A diferencia del algoritmo evolutivo, en cada iteración comparamos el estado con un estado vecino. Este estado vecino se crea tomando aleatoriamente uno de los nodos del estado actual y cambiándolo por un nodo vecino en la red, conservando que los nodos no se repitan.

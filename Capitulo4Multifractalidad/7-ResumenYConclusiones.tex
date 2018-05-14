@@ -1,0 +1,20 @@
+\newpage
+\section{Resumen y conclusiones del capítulo}
+
+En este capitulo, inicialmente se analizan 3 algoritmos presentes en la literatura: Fixed Size Box Counting (FSBC), Box Compact Counting (BCC) y SandBox (SB), estos métodos no son precisos para determinar la dimensión fractal, ya que dentro de sus pasos hay una selección aleatoria de centros de cajas. Por lo tanto, debe repetirse un gran número de veces para obtener un mejor resultado.
+
+La herramienta provista por estos algoritmos, permite caracterizar si una red es multifractal o monofractal en su estructura, se encuentra que:
+
+\begin{itemize}
+    \item Redes libres de escala, son multifractales, algo que es esperado debido a que se pueden describir a través de componentes centrados en los hubs
+    \item Redes de mundo pequeño, son monofractales, ya que son compactas debido a que su construcción busca reducir el diámetro de los caminos entre los nodos
+    \item Las redes aleatorias, no se puede caracterizar con estas medidas
+\end{itemize}
+
+Ninguno de los algoritmos estudiados garantiza un valor preciso de la dimensión fractal debido a que requieren realizar una búsqueda intensiva dentro de las redes y esto es impráctico en redes grandes.
+
+Estos algoritmos requieren un gran tiempo de cómputo, el cual depende del número de nodos y aristas, por lo que proveer una medida de complejidad es muy impreciso. En consecuencia, se comparan estos algoritmos utilizando el tiempo de cómputo en distintos ejemplos.
+
+Como estrategia para reducir el tiempo de cómputo, se propone un algoritmo evolutivo y uno de recocido simulado, la idea es mediante un proceso distinto al de cubrimiento de cajas que debe estudiar toda la red elegir los centros de las cajas. La estrategia se basa en una heurística que consiste en buscar una configuración de nodos, los cuales tengan el mayor grado posible y se encuentren lo más alejados entre sí que sea posible.
+
+Los resultados de la tabla \ref{tab:executionTimes}, indican que las estrategias de inteligencia artificial mejoran el tiempo de ejecución de los algoritmos FSBC y BCC: Para el algoritmo SB, debido a que depende de una selección aleatoria, no se puede concluir si las estrategias lo mejoran o no.

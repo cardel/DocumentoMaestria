@@ -91,8 +91,6 @@
 \renewcommand{\listtablename}{Lista de tablas}
 \listoftables
 
-
-%%%Resumen%%%%%%
 \chapter*{Resumen}
 \label{capResumen}
 \addcontentsline{toc}{chapter}{\nameref{capResumen}}
@@ -161,9 +159,13 @@
 
 \input{Capitulo4Multifractalidad/1-BoxCounting.tex}
 \input{Capitulo4Multifractalidad/2-AlgoritmoDeSandBox.tex}
-\input{Capitulo4Multifractalidad/3-EstategiasEvolutivas.tex}
-\input{Capitulo4Multifractalidad/4-EstrategiasSimulatedAnnealing.tex}
-\input{Capitulo4Multifractalidad/5-ResumenYConclusiones.tex}
+\input{Capitulo4Multifractalidad/3-AnalisisAlgoritmos.tex}
+
+
+\input{Capitulo4Multifractalidad/4-EstategiasEvolutivas.tex}
+\input{Capitulo4Multifractalidad/5-EstrategiasSimulatedAnnealing.tex}
+\input{Capitulo4Multifractalidad/6-AnalisisEstrategias.tex}
+\input{Capitulo4Multifractalidad/7-ResumenYConclusiones.tex}
 
 %%%%%Capitulo Cinco: Medición de Robustez%%%%%%%%
 \chapter{Medición de la robustez}\label{cap5}
@@ -174,40 +176,36 @@
 \input{Capitulo5Robustez/EstrategiasEvolutivas.tex}
 \input{Capitulo5Robustez/EstrategiasSimulated.tex}
 
-
-%%%%%Capitulo Seis: Implementacion%%%%%%%%
-\chapter{Implementación de la librería} \label{cap6}
-\markboth{Implementación de la librería}{Implementación de la librería}
-
-\input{Capitulo6Libreria/AspectosDeDesarrollo.tex}
-\input{Capitulo6Libreria/Requerimientos.tex}
-\input{Capitulo6Libreria/FuncionesProvistas.tex}
-\input{Capitulo6Libreria/API.tex}
-
-
-
-%%%%%%Capitulo Siete: Multifractalidad y robustezo%%%%%%%%%%%%%%%%%%%%%
-\chapter{Multifractalidad y robustez}\label{cap7}
+%%%%%%Capitulo Seis: Multifractalidad y robustezo%%%%%%%%%%%%%%%%%%%%%
+\chapter{Multifractalidad y robustez}\label{cap6}
 \markboth{Multifractalidad y robustez}{Multifractalidad y robustez}
 
 
-\input{Capitulo7MultifractalidadYRobustez/RelacionMultifractalidadRobustez.tex}
+\input{Capitulo6MultifractalidadYRobustez/RelacionMultifractalidadRobustez.tex}
 
-\input{Capitulo7MultifractalidadYRobustez/Conclusiones.tex}
+\input{Capitulo6MultifractalidadYRobustez/Conclusiones.tex}
 
-%%%%%%Capitulo Ocho: Comparación de algoritmos%%%%%%%%%%%%%%%%%%%%%
-\chapter{Análisis comparativo}\label{cap8}
-\markboth{Comparación de algoritmos}{Comparación de algoritmos}
 
-\input{Capitulo8AnalisisComparativo/Conclusiones.tex}
+%%%%%Capitulo Siete: Implementacion%%%%%%%%
+\chapter{Implementación de la librería} \label{cap7}
+\markboth{Implementación de la librería}{Implementación de la librería}
 
-%%%%CAPITULO nueve: Conclusiones y trabajos futuros
+\input{Capitulo7Libreria/AspectosDeDesarrollo.tex}
+\input{Capitulo7Libreria/Requerimientos.tex}
+\input{Capitulo7Libreria/FuncionesProvistas.tex}
+\input{Capitulo7Libreria/API.tex}
+
+
+
+
+
+%%%%CAPITULO A: Conclusiones y trabajos futuros
 
 \chapter{Conclusiones y trabajos futuros}\label{cap9}
 \markboth{Conclusiones y trabajos futuros}{Conclusiones y trabajos futuros}
 
-\input{Capitulo9Conclusiones/Conclusiones}
-\input{Capitulo9Conclusiones/TrabajosFuturos.tex}
+\input{Capitulo8Conclusiones/Conclusiones}
+\input{Capitulo8Conclusiones/TrabajosFuturos.tex}
 
 %%%%%BIBLIOGRAFIA%%%%%%%%
 \bibliography{Bibliografia}
@@ -220,6 +218,7 @@
 
 \input{CapituloAAnexos/1-RedesEstudio.tex}
 \input{CapituloAAnexos/2-ProtocoloDePruebas.tex}
+\input{CapituloAAnexos/3-Pruebas.tex}
 
 
 \end{document}
