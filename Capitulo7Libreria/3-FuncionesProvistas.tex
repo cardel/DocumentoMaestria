@@ -1,0 +1,71 @@
+\section{Funciones provistas}
+
+\subsection{Análisis multifractal}
+
+Las funciones provistas para el análisis multifractal son:
+
+\begin{lstlisting}[language=python]
+FSBCAlgorithm.FSBCAlgorithm.FSBCAlgorithm(g, minq, maxq, percentNodesT, centerNodes=array([], dtype=float64))
+
+BCAlgorithm.BCAlgorithm.BCAlgorithm(g, minq, maxq, percentNodesT, centerNodes=array([], dtype=float64))
+
+SBAlgorithm.SBAlgorithm.SBAlgorithm(g, minq, maxq, percentSandBox, repetitions, centerNodes=array([], dtype=float64))
+\end{lstlisting}
+
+Estas funciones permiten ingresar la configuración de los diferentes algoritmos.
+
+\begin{itemize}
+    \item maxq y minq, son los valores de q. El rango debe tener 0 incluido
+    \item g es el grafo en formato SNAP
+    \item porcentNodesT, percentSandBoxes, son el número de conjuntos que serán seleccionados como centros
+    \item repetitions, para SandBox, al ser un algoritmo de elección aleatoria de centros debe repetirse y tomar promedios de los resultados
+    \item centernodes, utilizados por las estrategias de Inteligencia Artificial que proveen al algoritmo centros ya calculados, por defecto es vacío
+\end{itemize}
+
+\subsection{Análisis de robustez}
+
+\begin{lstlisting}[language=python]
+robustness.robustness.robustness_analysis(graph, typeRemoval, minq, maxq, percentSandBox, repetitions, temperature=0, sizePopulation=0, iterationsGenetic=0, percentCrossOver=0, percentMutation=0, degreeOfBoring=0)
+\end{lstlisting}
+
+\begin{itemize}
+    \item maxq y minq, son los valores de q. El rango debe tener 0 incluido
+    \item typeRemoval, es el tipo de ataque, las opciones son:
+    \begin{enumerate}
+        \item Random: para aleatorio
+        \item Degree: para grado
+        \item Centrality: para centralidad
+        \item Genetic: para genético
+        \item Simulated: para recocido simulado
+    \end{enumerate}
+    \item percentSandBox, parámetro del algoritmo SandBox
+    \item repetitions, parámetro del algoritmo SanBox
+    \item temperature, parámetro del algoritmo de recocido simulado
+    \item  sizePopulation, iterationsGenetic, percentCrossOver, percentMutation, degreeOfBoring. Parámetros del algoritmo evolutivo
+\end{itemize}
+
+\subsection{Algoritmos evolutivos}
+
+\begin{lstlisting}[language=python]
+Genetic.Genetic.Genetic(g, minq, maxq, sizePopulation, iterations, percentCrossOver, percentMutation, degreeOfBoring, typeAlgorithm)
+\end{lstlisting}
+
+\begin{itemize}
+    \item percentCorssOver: Porcentaje de cruce
+    \item percentMutacion: Porcentaje de mutación
+    \item degreeOfBoring: Número de generaciones en las cuales se detiene el algoritmo si el mejor individuo no mejora
+    \item typeAlgorithm. Tipo de algoritmo que se aplica el análisis multifractal, puede ser:
+    \begin{enumerate}
+        \item SB para SandBox
+        \item BC Para Box Compact Counting
+        \item FSBC para Fixed Size Box Counting
+    \end{enumerate}
+\end{itemize}
+
+\subsection{Algoritmos de recocido simulado}
+
+\begin{lstlisting}[language=python]
+SimulatedAnnealing.SimulatedAnnealing.SA(g, minq, maxq, percentNodes, sizePopulation, Kmax, typeAlgorithm)
+\end{lstlisting}
+
+Los parámetros de este algoritmo han sido explicados anteriormente. El funcionamiento es simular al evolutivo, ya que se calculan los centros de las cajas y estas son pasadas a alguno de los algoritmos de análisis multifractal.

@@ -1,0 +1,23 @@
+\section{Requerimientos de la librería}
+
+
+\subsection{Dependencias de software}
+
+Se requiere Python 2.7 y las siguientes librerías:
+
+\begin{enumerate}
+    \item MatplotLib $>=$ 2.0
+    \item Numpy $>=$ 1.12
+    \item Snap $>=$ 4.0 (Esta viene incluida en la librería y no se requiere instalar)
+\end{enumerate}
+
+\subsection{Recomendaciones de capacidad de cómputo}
+
+Se recomienda tener memoria suficiente para el computo de redes muy grandes, ya que para optimizar se generaron matrices de distancias, estas pueden ocupar bastante espacio. Así mismo, en el proceso iterativo de los algoritmos de análisis multifractal requieren una gran cantidad de memoria por lo cálculos que se realizan, se recomienda para redes de menos de 10000 nodos la siguiente configuración
+
+\begin{enumerate}
+    \item Memoria: Al menos 4GB
+    \item Procesadores. Al menos 2 procesadores
+\end{enumerate}
+
+Para redes más grandes, se requiere mayor capacidad, sin embargo, como no se realizaron pruebas con redes de más de 10000 nodos, no se especifica una configuración determianda.
