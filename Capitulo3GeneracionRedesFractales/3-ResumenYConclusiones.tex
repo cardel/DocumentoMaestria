@@ -4,7 +4,7 @@ Las redes fractales se pueden generar utilizando algoritmos y estas tienen propi
 
 El algoritmo propuesto se basa en las matrices de adyacencia, ya que esto permite representar las aristas directamente. El proceso consiste en encontrar una arista entre un par de vértices y aplicar alguna heurística de construcción, que puede implicar conservar o eliminar la arista, crear nuevos nodos y aristas bajo cierta reglas de conexión con sus nodos.
 
-Es importante analizar la complejidad computacional de generar una (x,y)-flower de cualquier generación $n$. La idea consiste consiste en eliminar una arista de la generación $n-$, generar 2 nodos por cada arista e interconectarlos con los nodos de la arista que ha sido eliminada. Esto implica recorrer la matriz de adyacencia de $n-1$, lo que tiene una complejidad cuadrático.
+Es importante analizar la complejidad computacional de generar una (x,y)-flower de cualquier generación $n$. La idea consiste consiste en eliminar una arista de la generación $n-1$, generar 2 nodos por cada arista e interconectarlos con los nodos de la arista que ha sido eliminada. Esto implica recorrer la matriz de adyacencia de $n-1$, lo que tiene una complejidad cuadrático.
 
 Es importante aclarar que sólo se estudiaron 2 casos en este capitulo del número de valores infinitos que pueden tomar $x$ e $y$. En el caso de las redes estudiadas se encuentra que el húmero de vértices de la generación $n$ consiste en sumar aproximadamente $n+1$ veces el número de vértices de la generación anterior, por lo que se plantea la siguiente ecuación de recurrencia:
 

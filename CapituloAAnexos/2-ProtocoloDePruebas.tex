@@ -1,3 +1,29 @@
 \section*{Anexo B: Descripción de protocolos de prueba}
 \addcontentsline{toc}{section}{Anexo B: Descripción de protocolos de prueba} 
 \label{AnexoB}
+
+Las pruebas son ejecutadas bajo la siguiente configuración:
+
+\begin{enumerate}
+    \item Algoritmo SandBox: 40\% de los nodos como caja y, 250 repeticiones
+    \item Algoritmo Box Counting Fixed Size: Número de permutaciones 200\% del número de nodos
+    \item Algoritmo Box Compact Counting: Número de permutaciones 200\% del número de nodos
+    \item Estrategias genéticas:
+    \begin{itemize}
+        \item Porcentaje de nueva población 30\%
+        \item Tamaño población: 200
+        \item Número máximo de iteraciones: 250
+        \item Grado de aburrimiento: 20 iteraciones
+        \item Probabilidad de mutación: 5\%
+    \end{itemize}
+    \item Estrategia recocido simulado: Temperatura inicial: 3000, porcentaje de nodos 40\%
+\end{enumerate}
+
+Las pruebas son realizadas en la infraestructura de Google Cloud \url{cloud.google.com}, con la siguiente configuración:
+
+\begin{enumerate}
+    \item Memoria: 4.75GB
+    \item Disco duro: 8GB
+    \item Sistema operativo: Debian 9
+    \item 2 procesadores Intel Xeon 2.3GH
+\end{enumerate}
