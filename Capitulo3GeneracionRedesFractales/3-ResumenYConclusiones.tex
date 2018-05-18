@@ -4,14 +4,14 @@ Las redes fractales se pueden generar utilizando algoritmos y estas tienen propi
 
 El algoritmo propuesto se basa en las matrices de adyacencia, ya que esto permite representar las aristas directamente. El proceso consiste en encontrar una arista entre un par de vértices y aplicar alguna heurística de construcción, que puede implicar conservar o eliminar la arista, crear nuevos nodos y aristas bajo cierta reglas de conexión con sus nodos.
 
-Es importante analizar la complejidad computacional de generar una (x,y)-flower de cualquier generación $n$. La idea consiste consiste en eliminar una arista de la generación $n-1$, generar 2 nodos por cada arista e interconectarlos con los nodos de la arista que ha sido eliminada. Esto implica recorrer la matriz de adyacencia de $n-1$, lo que tiene una complejidad cuadrático.
+Es importante analizar la complejidad computacional de generar una (x,y)-flower de cualquier generación $n$. La idea consiste consiste en buscar dentro de la matriz de adyacencia una arista de la generación $n-1$, generar 2 nodos por cada arista e interconectarlos con los nodos de esta arista. Esto implica recorrer la matriz de adyacencia de $n-1$, lo que implica una complejidad cuadrático.
 
-Es importante aclarar que sólo se estudiaron 2 casos en este capitulo del número de valores infinitos que pueden tomar $x$ e $y$. En el caso de las redes estudiadas se encuentra que el húmero de vértices de la generación $n$ consiste en sumar aproximadamente $n+1$ veces el número de vértices de la generación anterior, por lo que se plantea la siguiente ecuación de recurrencia:
+Es importante aclarar que sólo se estudiaron 2 casos en este capitulo del número de valores infinitos que pueden tomar $x$ e $y$. En el caso de las redes estudiadas se encuentra que el húmero de vértices de la generación $n$ consiste en sumar aproximadamente $n+1$ veces el número de vértices de la generación anterior, por lo que, se plantea la siguiente ecuación de recurrencia:
 
 \begin{equation}
     T(n)=(n+1)T(n-1), T(0)=2, n \geq 0
 \end{equation}
 
-La solución de esta ecuación es $O(n!)$: Lo que indica que en una generación $n$ hay $O(n!)$ vértices y recorrer la matriz de adyacencia será el cuadrado de este valor. Por lo tanto, se concluye que la complejidad computacional y espacial para generar una red (x,y)-flower es de $O(n!)$
+La solución exacta esta ecuación es $\Gamma(n+1)$\footnote{Función Gamma}, debido a que $n\geq0$, su solución es del orden $O(n!)$. Lo que indica que en una generación $n$ hay $O(n!)$ vértices y el costo recorrer la matriz de adyacencia será el cuadrado de este valor. Por lo tanto, se concluye que la complejidad computacional y espacial para generar una red (x,y)-flower es de $O(n!)$
 
-Debido al elevado costo computacional de de memoria que se requiere para generar estas redes, se trabajará en las pruebas con la séptima generación.
+Debido al elevado costo computacional de memoria que se requiere para generar estas redes, se decide en las pruebas que se realizan en este proyecto trabajar con la séptima generación de (x,y)-flower.

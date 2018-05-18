@@ -3,9 +3,9 @@
 La robustez es una medida que permite analizar cómo una red conserva su estructura a medida que pierde nodos
 
 \begin{itemize}
-    \item Para las redes libres de escala, se encuentra que tienen una gran tolerancia a fallos aleatorios, sin embargo, si sus hubs se ven afectados, la red pierde rapidamente sus propiedades estructurales
-    \item Las redes de mundo pequeño conservan sus propiedades en la mayoría de ataques, excepto el de centralidad ya que su estructura está basada en que la distancia promedio entre cada par de nodos sea la menor posible, lo que implica que muchos caminos pasan por un número determinado de nodos
-    \item En redes aleatorias, la robustez depende de su estructura y puede variar de acuerdo cómo es la estructura interna de la red.
+    \item Para las redes libres de escala, se encuentra que tienen una gran tolerancia a fallos aleatorios, sin embargo, si sus hubs se ven afectados, la red pierde rápidamente sus propiedades estructurales. En la mayoría de casos después de perder el 20\% de los nodos con mayor grado, es tal el efecto en la estructura de la red que las medidas muestran que hay pequeños grupos de nodos no conexos.
+    \item Las redes de mundo pequeño conservan sus propiedades en la mayoría de ataques, excepto el de centralidad ya que su estructura está basada en que la distancia promedio entre cada par de nodos sea la menor posible, lo que implica que muchos caminos pasan por un número determinado de nodos.
+    \item En redes aleatorias, las medidas robustez dependen de su estructura y puede variar de acuerdo cómo es la estructura interna de la red. En la mayoría de redes examinadas, el ataque por grado es el que más efecto produce en la red.
 \end{itemize}
 
 Considerando la eficiencia de daño de acuerdo a las dos medidas utilizadas, las estrategias evolutiva y de recocido simulado, presentan un comportamiento mejor que el caso aleatorio, pero peor que los ataques por centralidad o grado. Esto se debe a que estas medidas están pensadas para destruir los centros de las cajas para el análisis multifractal.

@@ -6,7 +6,7 @@ El análisis multifractal es útil para caracterizar la heterogeneidad espacial 
 
 Las diferentes estrategias permiten calcular los exponentes de masa $\tau_q$, que representan como cambia la densidad de la red a medida que se escala por un factor real $q$ y la pendiente de esta recta para un $q$ dado viene siendo la dimensión fractal $D_q$, de esta forma se puede estudiar los cambios en la estructura de la red a medida que esta es escalada.
 
-Si la función $D_q$ es una linea recta, se dice que la red es monofractal, en caso contrario, es multifractal. Esta función tiene algunos valores clave\cite{Halsey1986}: $D_0$ es la dimensión fractal, $D_1$ es la dimensión  informacional y $D_2$ es la correlación.
+Si la función $D_q$ es una linea recta, se dice que la red es monofractal, en caso contrario, es multifractal. Esta función tiene algunos valores clave\cite{Halsey1986}: $D_0$ es la dimensión fractal, $D_1$ es la dimensión informacional, que indica cómo se escala la información promedio que se necesita para identificar una caja ocupada y $D_2$ es la correlación, la cual es una medida que indica cuantos nodos se encuentran dentro de una estructura fractal.
 
 \section{Estrategias de cubrimiento de cajas}
 \label{cap4:seccionBox}
@@ -75,6 +75,8 @@ Debido a que la elección de los centros de las cajas es aleatorio, esto puede a
 
 El procedimiento para calcular las dimensiones fractales es:
 
+\fbox{\begin{minipage}{16.5cm}
+
 \begin{enumerate}
     \item Se generan matrices de adyacencia y distancias
     \item En primer lugar, asegurarse que todos los nodos en la red no esté cubiertos por alguna caja
@@ -86,6 +88,7 @@ El procedimiento para calcular las dimensiones fractales es:
      \item Se calcula la suma $ Z_r(q) =  \sum \limits_{\mu(B) \neq 0} \mu(B)^q$
      \item Se repiten los pasos 3-8 con cada uno de los conjuntos $T$. Se toman los promedios de $\overline{Z_r(q)} = \sum^t (Z_r(q))/T$  
 \end{enumerate}
+\end{minipage}}
 
 Posteriormente se realiza una regresión lineal entre $\ln \overline{Z_r(q)}$ y $\ln\frac{r}{d}$. Se debe considera el caso especial cuando $q=1$.
 
@@ -96,6 +99,7 @@ Este algoritmo es propuesto por Li y otros\cite{Li2014} como una variación del 
 
 El procedimiento para obtener la dimensión fractal es:
 
+\fbox{\begin{minipage}{16.5cm}
 \begin{enumerate}
     \item Se generan las matrices de distancias y de adyacencia
     \item Inicialmente todos los nodos de la red no están cubiertos por ninguna caja
@@ -107,5 +111,6 @@ El procedimiento para obtener la dimensión fractal es:
     \item Obtenga $Z_r(q)$ de la misma forma que en FSB
     \item Realice el mismo proceso de regresión que en BCFS para obtener los exponentes de masa y la dimensión fractal
 \end{enumerate}
+\end{minipage}}
 
 Los autores aseguran que este algoritmo permite estimar mejor la dimensión fractal $D_0$, ya que al tener la configuración con el menor número de cajas posible, es la mejor forma de aproximar a los algoritmos de cálculo de dimensión fractal.
