@@ -28,6 +28,7 @@ Debido a que se debe ejecutar el análisis de multifractalidad a medida que se p
     \centering
     \includegraphics[scale=0.7]{Capitulo6MultifractalidadYRobustez/imagenes/grafica_DqDegree20180512_143117ScaleFree8000Nodes.png}
     \caption{Análisis de multifractalidad de red libre de escala a ataque por grado }
+    \label{fig:multfractascalefree}
 \end{figure}
 
 \begin{figure}[H]
@@ -51,6 +52,7 @@ Debido a que se debe ejecutar el análisis de multifractalidad a medida que se p
 
 
 \subsubsection{Red de mundo pequeño}
+\label{sec:multiRobu}
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{Capitulo6MultifractalidadYRobustez/imagenes/grafica_DqRandom20180510_143549SmallWorld5000NodesRewire01.png}
@@ -181,9 +183,11 @@ Debido a que se debe ejecutar el análisis de multifractalidad a medida que se p
 
 \subsection{Discusión de resultados}
 
-La relación entre multifractalidad y robustez está dada en como se comporta la dimensión fractal de la red a medida que pierde nodos.
+La relación entre multifractalidad y robustez está dada en como se comporta la dimensión fractal de la red a medida que pierde nodos. Se encuentra que entre más elevada sea la dimensión fractal la red es más robustez, esto se evidencia al cruzar la información, por ejemplo entre la variación del componente gigante \ref{figure:smallWorldGC} y de camino más cortos \ref{figure:smallWorldAPL} sin importar la estrategia de ataque con respecto a la dimensión fractal estudiadas en la sección \ref{sec:multiRobu}.
 
-La estrategia que más efectos produce son las estrategias de ataque por grado y por centralidad, ya que estas tienden a desintegrar la red. El efecto es tan fuerte, que eliminados un 20\% a 30\% de los nodos, no es posible aplicar los algoritmos de análisis multifractal.
+Así mismo, se encuentra que realizar el análisis de multifractalidad y robustez permite concluir que redes que presentan un gran número de componentes son las más que se adaptan ante fallas aleatorias, ya que las curvas de dimensión fractal presentan poca variación si se pierde un porcentaje pequeño de nodos (10\% o 20\%). En el caso de las redes que tienden a ser monofractales, son las que mejor se adaptan ante cualquier tipo de ataque, ya que el análisis multifractal permite intuir que su estructura interna es compacta, es decir toleran fallos de cualquier tipo.
+
+La estrategia que más efectos produce son las de ataque por grado y centralidad, ya que estas tienden a desintegrar la red. El efecto es tan fuerte, que eliminados un 20\% a 30\% de los nodos, no es posible aplicar los algoritmos de análisis multifractal en algunas redes complejas, ello se evidencia, por ejemplo, en la figura \ref{fig:multfractascalefree}.
 
 Las estrategias de ataque por algoritmos de Inteligencia Artificial, no tienen un efecto tan evidente como lo tienen la centralidad o el grado. Sin embargo, muestran mayor efecto en la redes que las estrategia aleatoria.
 
@@ -191,4 +195,4 @@ Con respecto a las redes de mundo pequeño, se observa que estas conservan su es
 
 Para las redes aleatorias, libres de escala, reales y fractales, se encuentra que pierden su estructura a medida que pierden nodos, pasando de ser objetos multifractales a monofractales. Esto se debe a que estas presentan en mayor o menor medida hubs, los cuales estructuralmente son los centros de estructuras internas, que a medida que se pierden la red se va tornando más uniforme.
 
-En todos los casos, la dimensión fractal tiende hacia 0 a medida que la red pierde nodos, lo que indica que el diámetro de la red tiende a cero.
+En todos los casos, la dimensión fractal tiende hacia 0 a medida que la red pierde nodos, lo que indica que el diámetro de las estructuras internas de la red tiende a cero.

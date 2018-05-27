@@ -24,3 +24,34 @@ El análisis multifractal se aplica en diferentes áreas del conocimiento, a con
     \item En la comunicación entre especies, se ha encontrado que el habla y los sonidos de algunos animales presenta patrones multifractales, un caso son los sonidos que emiten las aveces\cite{Roeske2018}. El análisis multifractal permite concluir que los sonidos muestran comportamientos globales que varían de acuerdo al tono o la longitud del canto.
     \item El análisis multifractal se utiliza para estudiar la estructura de diferentes redes que modelan el tráfico en redes de telecomunicaciones\cite{DinhDang2004}, sistemas de tráfico\cite{Vojak1994} y redes sociales\cite{Wei2017}. En estas redes reales, se ha encontrado patrones monofractales en redes que son de mundo pequeño y multifractales en las que presentan semejanzas con redes libres de escala.
 \end{itemize}
+
+
+\subsection{Herramientas para el análisis fractal y multifractal}
+
+En la exploración del estado del arte no se evidencia la existencia de una herramienta comercial para usuario final para el análisis multifractal. Lo que se encuentra son implementaciones realizadas por los investigadores de este tema y un complemento para el software Matlab\cite{matlab}. En la tabla \ref{herramientasFractal} se pueden observar algunas de ellas:
+
+
+\begin{longtable}{|p{3cm}|p{4cm}|p{2cm}|p{2cm}|p{4cm}|}
+    \hline
+    \textbf{Nombre} & \textbf{Descripción} & \textbf{Tipo de acceso} & \textbf{Lenguaje de programación} & \textbf{Funciones que provee} \\
+    \hline
+    \endhead
+    Multifractal.jl\cite{multifractaljl} & Librería para el análisis multifractal de series de tiempo & Paga\footnote{La librería es gratuita, pero Matlab\cite{matlab} es un software pago \label{foot:matlab}} & Matlab & Determinar el espectro multifractal y dimensiones fractales.  \\
+    \hline
+    Multifractal Tool\cite{zenodo} & Herramienta para el análisis multifractal de series de tiempo y de imágenes & Paga\footnotemark[1] & Matlab &Provee análisis multifractal utilizando el espectro calculado con la transformada Wavelet, así mismo provee la reconstrucción multifractal de series de tiempo e imágenes. \\
+    \hline
+    Multifractal estimation using a standard box-counting algorithm\cite{lsaravia} & Esta librería permite realizar un análisis multifractal de un conjunto de imágenes & Libre & R y C++ & Permite calcular los exponentes de masa $T_q$ y dimensiones fractales $D_q$. Es trabajado en el articulo Multifractal analysis of spatial patterns in ecological communities\cite{Saravia2014}. \\
+    \hline
+    Multifractal Analysis ToolBox\cite{toolbox} & Complemento de Simulink para el análisis multifractal de señales (series e imágenes) & Paga & Matlab & Provee la gráfica de dimensión fractal, el cual denominan espectro multifractal. \\
+    \hline
+    Multiscale Multifractal Analysis (MMA)\cite{MMA} & Librería de análisis multifractal del Banco de Datos Physionet & Paga\footnotemark[1] & Matlab & Implementación del método propuesto en el articulo Multiscale multifractal analysis of heart rate variability recordings with a large number of occurrences of arrhythmia\cite{Gieratowski2012} \\
+    \hline
+    MDFA in Python\cite{pythonMFDA} & Modulo de Python para el análisis multifractal de series de tiempo e imágenes & Libre & Python & Esta es la implementación utilizada en al artículo Multifractal analysis for all. Frontiers in Physiology\cite{Jurica2015} \\
+    \hline
+    Implementation in Python of analysis multifractal\cite{pythonFractal} & Módulo en Python para análisis fractal de redes complejas & Libre & Python & Son las implementacion de los métodos propuestos en How to calculate the fractal dimension of a complex network- the box covering algorithm\cite{Song2007}.\\
+    \hline
+\caption{Herramientas para el análisis multifractal encontradas en la literatura}
+\label{tab:herramientasFractal}
+\end{longtable}
+
+Se puede evidenciar en la exploración realizada, que no se encuentra una herramienta para el análisis multifractal en redes complejas.

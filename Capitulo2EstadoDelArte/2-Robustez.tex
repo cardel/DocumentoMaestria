@@ -26,3 +26,29 @@ Gran parte de las aplicaciones de análisis de robustez nacen a partir del traba
     \item Para el suministro de energía, Pahwa y otros\cite{Pahwa2014} estudian el estrés que son sometidas las redes de transmisión de energía a medida que aumenta la demanda y las caídas de enlaces. Ellos realizan un estudio con redes reales encontrando una directa relación entre la caída total del sistema y la medida de robustez de la red.
     \item En salud pública, un tema de gran interés es el estudio de la propagación de epidemias dentro de comunidad. En un estudio realizado por Chami y otros\cite{Chami2017} se estudian las estrategias que pueden aplicar las organizaciones encargadas de velar por la salud pública. Algunas de estas estrategias consisten en aislar a los individuos enfermos o fomentar que estas personas eviten contacto con otros, sin embargo, ellos encuentran a partir de un caso de estudio que consiste en una red de amistades de comunidades rurales en Uganda que un enfoque más eficiente para controlar la propagación de epidemias es vacunar o aislar aleatoriamente a ciertos individuos que tienen contacto con muchas personas así no estén enfermos, como es el caso de profesores, funcionarios de gobierno entre otros. Al aplicar este enfoque en la comunidad de estudio, se encuentra que la efectividad de la propagación de enfermedades se reduce, ya que esto produce un mayor efecto en la red de propagación.
 \end{itemize}
+
+
+\subsection{Herramientas para el análisis de robustez}
+
+Para el análisis de robustez, en la literatura explorada se encuentran las herramientas descritas en la tabla \ref{tab:herramientasRobustness}
+
+\begin{longtable}{|p{3cm}|p{4cm}|p{2cm}|p{2cm}|p{4cm}|}
+    \hline
+    \textbf{Nombre} & \textbf{Descripción} & \textbf{Tipo de acceso} & \textbf{Lenguaje de programación} & \textbf{Funciones que provee} \\
+    \hline
+    \endhead
+    Attack Robustness and Centrality of Complex Networks\cite{robustnessAttack} & Evaluación de redes complejas bajo diferentes estrategias de ataque & Libre & Python & Implementación de las estrategias de análisis de robustez del articulo Attack Robustness and Centrality of Complex Networks\cite{Iyer2013}. Se provee la medida R con relación al tamaño del componente gigante.\\
+    \hline
+    netjson-robustness-analyser\cite{netjson} & Librería para análisis de robustez de grafos en formato NETJSON & Libre & Python & Esta librería sólo permite visualizar los grafos después de aplicar alguna estrategia de ataque.\\
+    \hline
+    Graph Theory Analysis of Brain MRI Data\cite{brainGraph}. & Librería para el análisis de redes que describen conexiones de neuronas en el cerebro.& Libre & Python & Provee las medidas estructurales de la red e incluye un análisis de robustez con respecto a la distancia promedio entre los vértices \\
+    \hline
+    Genonets\cite{genonets} & Librería para el análisis de redes complejas & Libre & Python & Esta librería permite cargar, obtener medidas y realizar análisis de robustez de redes complejas en formato GML. \\
+    \hline
+    Transport Network Criticality Analysis\cite{transporteTool} & Librería para el análisis de robustez de redes de transporte & Libre & Python & Esta librería permite realizar un análisis de robustez de redes complejas que se obtienen de un sistema de transporte. Esta librería es utilizada en la tesis de maestría Measuring freight transport network criticality: A case study in Bangladesh\cite{transporteTool2} \\
+    \hline
+\caption{Herramientas para el análisis de robustez encontradas en la literatura}
+\label{tab:herramientasRobustness}    
+\end{longtable}
+
+En la exploración realizada se evidencia que hasta el momento no se encuentra evidencia de la existencia de una herramienta que realice una relación entre el análisis multifractal y de robustez.
