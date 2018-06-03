@@ -1,13 +1,20 @@
-\section{Análisis de los algortitmos}
+\section{Análisis de los algortitmos}\label{sec:cap4analisis}
 
 Para analizar los 3 algoritmos estudiado Box Counting Fixed Size (BCFS), Box Covering Compact (BCC) y SandBox(SB); se seleccionan algunas redes de prueba, las cuales pueden ser consultadas en el Anexo A de la página \pageref{AnexoA},
 
-La configuración y protocolo de pruebas es explicado en el Anexo B de la página\pageref{AnexoB}
+La configuración y protocolo de pruebas es explicado en el Anexo B de la página \pageref{AnexoB}
 
+Para este capitulo se han seleccionado las siguientes pruebas:
+
+\begin{enumerate}
+    \item Red A: Red libre de escala generada 4000 nodos.
+    \item Red B: Red de mundo pequeño generada con probabilidad de reconexión de 10\%.
+    \item Red C: Red aleatoria generada con 5620
+    \item Red D: Red observada en la bacteria Ecoli.
+    \item Red E: Red fractal generada (2,2)-flower.
+\end{enumerate}
 
 \subsection{Redes libres de escala}
-
-Se selecciona la red libre de escala de 4000 nodos 
 
 Inicialmente, para cada estrategia se analiza la relación entre $q$ y $\ln(Zr(q))$
 
@@ -66,8 +73,6 @@ En las gráficas se puede observar que las redes libres de escala son multifract
 
 \subsection{Redes de mundo pequeño}
 
-A continuación se realiza el mismo proceso para una red de mundo pequeño con 5000 nodos generada con un modelo de Watts-Strogatz con una probabilidad de reconexión del 10\%
-
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{Capitulo4Multifractalidad/imagenes/a_TqLnrBCsmallWorld4000p10.png}
@@ -76,7 +81,6 @@ A continuación se realiza el mismo proceso para una red de mundo pequeño con 5
 
 A continuación, los exponentes de masa:
 
-
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{Capitulo4Multifractalidad/imagenes/a_TqsmallWorld4000p10.png}
@@ -84,8 +88,6 @@ A continuación, los exponentes de masa:
 \end{figure}
 
 Finalmente, la dimensión fractal generalizada
-
-
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{Capitulo4Multifractalidad/imagenes/a_DqsmallWorld4000p10.png}
@@ -93,8 +95,6 @@ Finalmente, la dimensión fractal generalizada
 \end{figure}
 
 De acuerdo a los datos del articulo se encuentra:
-
-
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|c|c|}
@@ -124,8 +124,6 @@ Se observa que la variación en la dimensión fractal es pequeña, de hecho meno
 La dimensión fractal de esta red es 3.47
 
 \subsection{Redes aleatorias}
-
-Se selecciona la red aleatoria de 5620 nodos.
 
 \begin{figure}[H]
     \centering
@@ -171,11 +169,7 @@ Los análisis realizados a las redes de prueba, permite concluir que el análisi
     \caption{Comparación de los datos obtenidos con los del artículo de Wang\cite{Wang2012}}
 \end{table}
 
-
-
-\subsection{Redes reales}
-
-De las redes reales de prueba, se selecciona la red ECOLI.
+\subsection{Red observada de Ecoli}
 
 \begin{figure}[H]
     \centering
