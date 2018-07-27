@@ -1,10 +1,10 @@
 \section{Análisis de los algortitmos}\label{sec:cap4analisis}
 
-Para analizar los 3 algoritmos estudiado Box Counting Fixed Size (BCFS), Box Covering Compact (BCC) y SandBox(SB); se seleccionan algunas redes de prueba, las cuales pueden ser consultadas en el Anexo A de la página \pageref{AnexoA},
+Para analizar los 3 algoritmos estudiados Box Counting Fixed Size (BCFS), Box Covering Compact (BCC) y SandBox(SB); se seleccionan algunas redes de prueba, las cuales pueden ser consultadas en el Anexo A de la página \pageref{AnexoA},
 
 La configuración y protocolo de pruebas es explicado en el Anexo B de la página \pageref{AnexoB}
 
-Para este capitulo se han seleccionado las siguientes pruebas:
+Para este capítulo se han seleccionado las siguientes pruebas:
 
 \begin{enumerate}
     \item Red A: Red libre de escala generada 4000 nodos.
@@ -41,7 +41,7 @@ Se observa que para el método BCFS los $q<0$ no tienen significado, esto se deb
     \caption{Dimensión fractal generalizada para red libre de escala 4000 nodos}
 \end{figure}
 
-De esta se puede obtener la siguiente información y compararla con el articulo de Wang\cite{Wang2012}:
+De esta se puede obtener la siguiente información y compararla con el artículo de Wang\cite{Wang2012}:
 
 \begin{table}[H]
     \centering
@@ -65,7 +65,7 @@ De esta se puede obtener la siguiente información y compararla con el articulo 
     \caption{Comparación de los datos obtenidos con los del artículo de Wang\cite{Wang2012}}
 \end{table}
 
-Las diferencias en la medida de la dimensión fractal se deben a que el método es una aproximación y debe ejecutarse muchas veces, además que las redes del articulo y la generada son distintas.
+Las diferencias en la medida de la dimensión fractal se deben a que el método es una aproximación y debe ejecutarse muchas veces, además que las redes del artículo y la generada son distintas.
 
 Para evitar estas diferencias Li\cite{Li2014} recomienda que para el caso de $q=0$ se tome directamente la dimensión fractal obtenida por algoritmo de Box Counting, que en este caso es 3.13.
 
@@ -94,7 +94,7 @@ Finalmente, la dimensión fractal generalizada
     \caption{Dimensión fractal generalizada para red de mundo pequeño con 5000 nodos y $p=10\%$}
 \end{figure}
 
-De acuerdo a los datos del articulo se encuentra:
+De acuerdo a los datos del artículo se encuentra:
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|c|c|}
@@ -117,7 +117,7 @@ De acuerdo a los datos del articulo se encuentra:
     \caption{Comparación de los datos obtenidos con los del artículo de Wang\cite{Wang2012}}
 \end{table}
 
-Los resultados varían ya que las redes del articulo y las utilizadas en estas pruebas son generadas, es decir que no son las mismas.
+Los resultados varían ya que las redes del artículo y las utilizadas en estas pruebas son generadas, es decir que no son las mismas.
 
 Se observa que la variación en la dimensión fractal es pequeña, de hecho menor que 1, por lo que, se puede concluir que las redes de mundo pequeño tienden a ser monofractales, es decir que se pueden considerar como una sola estructura. Es importante indicar que las mediciones de los diferentes algoritmos requieren un mayor número de iteraciones para mejorar su precisión.
 

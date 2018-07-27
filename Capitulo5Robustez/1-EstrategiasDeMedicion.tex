@@ -1,6 +1,6 @@
 \section{Análisis de robustez}
 
-La medición de la robustez se utiliza el índice R presentado por Schneider\cite{Schneider2011} para calcular la robustez en la red. En el cual se toman dos medidas
+La medición de la robustez se utiliza el índice R presentado por Schneider\cite{Schneider2011} para calcular la robustez en la red. En el cual se toman dos medidas:
 
 \begin{itemize}
     \item El número de nodos con respecto al total inicial de nodos del componente gigante a medida que la red pierde nodos
@@ -13,7 +13,7 @@ El algoritmo de robustez se describe de la siguiente forma:
 \begin{enumerate}
     \item Se calculan las medidas iniciales en la red sin quitar ningún nodo.
     \item Se van quitando simultáneamente 10\% de los nodos de la red bajo alguna estrategia de ataque elegida.
-    \item Se calcula la medida de robustez como la suma de los medidas a medida que se van quitando los nodos simultáneamente.
+    \item El índice $R$ de robustez es el promedio de la suma de las medidas que se toman cada vez que la red pierde un porcentaje de nodos simultáneamente.
 \end{enumerate}
 \end{minipage}}
 

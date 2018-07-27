@@ -25,10 +25,9 @@ Las redes que se van a estudiar son:
     \caption{Medida componente de promedio de camino más cortos}
 \end{figure}
 
-En las redes libres de escala, las medidas indican que la red pierde sus propiedades estructurales más rápidamente con los ataques de grado y centralidad. Esto se debe a que en gran medida los hubs, son los que se encuentran entro de los caminos más cortos entre cualquier par de nodos.
+En las redes libres de escala, las medidas indican que la red pierde sus propiedades estructurales más rápidamente con los ataques de grado y centralidad. Esto se debe a que la pérdida hubs, implica que la red pierde capacidad de transmitir información y esto se refleja en que los caminos más cortos entre cualquier par de nodos, tienden a ser más largos.
 
-Los ataques genético y recocido presentan una efectividad intermedia de daño.
-
+Los ataques genético y recocido presentan una efectividad intermedia de afectación de las propiedades estructurales de la red, son mejores que el caso aleatorio, pero en las pruebas realizadas no presentan mejores resultados que los ataques por grado y centralidad.
 
 \subsection{Pruebas red de mundo pequeño}
 
@@ -85,7 +84,7 @@ En las redes aleatorias, el ataque por centralidad tiene el mismo efecto que las
 \end{figure}
 
 
-En el caso de esta red observada, se observa que tiene la presencia de hubs, ya que al eliminar nodos por su grado, el tamaño del componente gigante se ve reducido considerablemente.
+Este resultado indica que al eliminar nodos de acuerdo a su grado, el tamaño del componente gigante se ve reducido considerablemente.
 
 \subsection{Prueba red fractal}
 
@@ -102,4 +101,4 @@ En el caso de esta red observada, se observa que tiene la presencia de hubs, ya 
     \caption{Medida componente de promedio de camino más cortos}
 \end{figure}
 
-En el caso del red fractal, la estrategia de ataque más eficiente es la de centralidad. Esto se explica debido a que los fractales se generan iterativamente a partir de los nodos de las generaciones anteriores, los cuales pasan a ser parte de los caminos más cortos entre cualquier par de nodos.
+En el caso de la red fractal, la estrategia de ataque más eficiente es la de centralidad. Esto se explica debido a que los fractales se generan iterativamente a partir de los nodos de las generaciones anteriores, los cuales pasan a ser parte de los caminos más cortos entre cualquier par de nodos.
