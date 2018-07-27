@@ -1,7 +1,7 @@
 \section{Algoritmo para generar redes fractales}
 
 Para la generación de redes fractales se utiliza la matriz de adyacencia para realizar este proceso. La matriz de adyacencia $M$ de un grafo o red $G(V,E)$ no dirigido es de tamaño $|V|\times|V|$. Para cada $(i,j)\in V^2$ se tiene que $M_{i,j}=1$ si existe una arista entre $i$ y $j$, en caso contrario $M_{i,j}=0$. 
-Dado que la matriz de adyacencia para grafos no dirigidos tiene simetría triangular superior, sólo se requiere recorrer las filas $i$ y columnas $j$ que cumplan $i<j$
+Dado que la matriz de adyacencia para grafos no dirigidos tiene simetría triangular superior, sólo se requiere recorrer las filas $i$ y columnas $j$ que cumplan $i<j$.
 
 \subsection{Red (2,2)-flower}
 
@@ -17,7 +17,7 @@ Para la generación 0, se toma como caso base la siguiente matriz de adyacencia:
 \caption{Matriz de adyacencia para la generación 0 de (2,2)-flower}
 \end{figure}
 
-Para cada generación, se recorre la matriz de tal forma cuando se encuentra un $1$ en una posición $(i,j)$ cualesquiera, esta es cambiada por 0, es decir que se elimina la arista, es de anotar, que también se hace lo mismo con $(j,i)$ dado que simétrica.  Después se agregan dos filas llenas de ceros $k$ y $k+1$. Dado que la matriz es simétrica agregar una fila implica agregar una columna. En las siguientes posiciones se coloca 1:
+Para cada generación, se recorre la matriz de tal forma que cuando se encuentra un $1$ en una posición $(i,j)$ cualesquiera, esta es cambiada por 0, es decir que se elimina la arista, es de anotar, que también se hace lo mismo con $(j,i)$ dado que simétrica.  Después se agregan dos filas llenas de ceros $k$ y $k+1$. Dado que la matriz es simétrica agregar una fila implica agregar una columna. En las siguientes posiciones se coloca 1:
 
 \begin{itemize}
     \item En las posiciones $(i,k)$, $(k,i)$, $(i,k+1)$, $(k+1,i)$, $(j,k)$, $(j,k+1)$, $(j,k+1)$ y $(j,k+1)$,
@@ -82,7 +82,9 @@ Para la generación 0, se toma como caso base la siguiente matriz de adyacencia:
 \caption{Matriz de adyacencia para la generación 0 de (1,3)-flower}
 \end{figure}
 
-Para cada generación, se recorre la matriz de tal forma cuando se encuentra un $1$ en una posición $(i,j)$ cualesquiera. Como se deben agregar dos vértices, se crean filas llenas de ceros $k$ y $k+1$. Dado que la matriz es cuadrada agregar una fila implica agregar una columna. Para crear el camino de longitud 1, en las siguientes posiciones se coloca 1:
+Para cada generación, se recorre la matriz de tal forma cuando se encuentra un $1$ en una posición $(i,j)$ cualesquiera se deben crear dos vértices, los cuales se conectan centre sí, uno de los vértices se conecta con el vértice $i$ y el otro con el vértice $j$. 
+
+Como se deben agregar dos vértices, se crean filas llenas de ceros $k$ y $k+1$. Dado que la matriz es cuadrada agregar una fila implica agregar una columna. Para crear el camino de longitud 1, en las siguientes posiciones se coloca 1:
 
 \begin{itemize}
     \item Para generar un camino de longitud 2, para las posiciones $(k,k+1)$ y $(k+1,k)$ 
